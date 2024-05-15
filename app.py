@@ -13,6 +13,7 @@ import os
 
 load_dotenv()
 API_URL = os.getenv('API_URL')
+print(API_URL)
 
 nltk.download('stopwords')
 nltk.download('wordnet')

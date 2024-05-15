@@ -20,10 +20,10 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the necessary saved models
-loaded_best_model = joblib.load('best_model.joblib')
-loaded_tfidf_vectorizer = joblib.load('tfidf_vectorizer.joblib')
-lda_model = joblib.load('lda_model.joblib')
-count_vectorizer = joblib.load('count_vectorizer.joblib')
+loaded_best_model = joblib.load('models/best_model.joblib')
+lda_model = joblib.load('models/lda_model.joblib')
+loaded_tfidf_vectorizer = joblib.load('vectors/tfidf_vectorizer.joblib')
+count_vectorizer = joblib.load('vectors/count_vectorizer.joblib')
 def clean_text(text):
     text = re.sub(r'<.*?>', '', text)
     text = re.sub(r'[^\w\s]', '', text)

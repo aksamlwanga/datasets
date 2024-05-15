@@ -3,7 +3,7 @@ function sendReview() {
     var reviews = reviewsText.split('\n').filter(r => r.trim() !== ''); // Split by newline and filter out empty lines
 
     $.ajax({
-        url: 'http://127.0.0.1:5000/predict', // URL of the Flask API
+        url: API_URL, // URL of the Flask API
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ reviews: reviews }),

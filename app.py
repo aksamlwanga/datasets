@@ -9,12 +9,15 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from dotenv import load_dotenv
 from flask_cors import CORS
+import os 
 
 load_dotenv()
+API_URL = os.getenv('API_URL')
 
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
+
 
 app = Flask(__name__)
 CORS(app)
@@ -34,7 +37,7 @@ def clean_text(text):
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', api_url=API_URL)
 
 @app.route('/predict', methods=['POST'])
 def predict():

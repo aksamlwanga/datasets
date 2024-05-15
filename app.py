@@ -17,7 +17,7 @@ API_URL = os.getenv('API_URL')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
-
+nltk.download('vader_lexicon')
 
 app = Flask(__name__)
 CORS(app)
@@ -66,4 +66,4 @@ def predict():
     return jsonify(results)
 
 if __name__ == '__main__':
-  app.run(debug=False)
+  app.run(debug=True)

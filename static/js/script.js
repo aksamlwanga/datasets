@@ -1,7 +1,7 @@
 function sendReview() {
     var reviewsText = document.getElementById('reviewInput').value.trim();
     var reviews = reviewsText.split('\n').filter(r => r.trim() !== ''); // Split by newline and filter out empty lines
-
+    console.log(APP_URL);
     $.ajax({
         url: API_URL, // URL of the Flask API
         method: 'POST',

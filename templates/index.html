@@ -10,14 +10,12 @@
     <script>
         var API_URL = "{{ api_url }}";
     </script>
-    
 </head>
 <body>
     <div class="container">
-        <h1>Airlines Service Review Quality Predictor</h1>
-        <h2>Group One - MCSD2123 </h2>
-        <h3>Group Assignment 1-2024 </h3>
-      
+        <h1 class="animated-title animate__animated animate__fadeInDown">Airlines Service Review Quality Predictor</h1>
+        <h2 class="animated-title animate__animated animate__fadeInUp">Group One - MCSD2123</h2>
+        <h3 class="animated-title animate__animated animate__fadeInLeft">Group Assignment 1-2024</h3>
         <p>Enter your reviews below, separated by a newline (press Enter for a new review).</p>
         <textarea id="reviewInput" placeholder="Enter reviews here...">
 The flight was comfortable and the staff were very friendly.
@@ -25,6 +23,14 @@ I had a terrible experience with the food and the seats were uncomfortable.
         </textarea><br>
         <button onclick="sendReview()">Predict Quality</button>
         <div class="output" id="predictionResult"></div>
+        <div class="model-details">
+            <p>Performance Metrics For this Model:</p>
+            <ul>
+                <li><strong>Accuracy:</strong> 88.5%</li>
+                <li><strong>F1-Score:</strong> 0.89</li>
+                <li><strong>ROC-AUC Score:</strong> 0.95</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
